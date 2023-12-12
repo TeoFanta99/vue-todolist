@@ -29,7 +29,7 @@
             <!-- in questi li ci sono il v-for per poterlo moltiplicare e la forma compatta di v-if per aggiungere la classe "barrato" agli elementi  -->
             <li v-for="(todo, i) in todos" :class="todos[i].done === true ? 'barrato' : '' ">
                 {{todos[i].text}}
-                <i class="fa-solid fa-x"></i>
+                <i class="fa-solid fa-x" @click="removeItem(i)"></i>
                  
             </li>
             
