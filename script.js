@@ -41,6 +41,8 @@ const { createApp } = Vue
         console.log(this.todos[this.activeItem].text);
     },
     methods: {
-         
+        removeItem (index) {
+            this.todos.splice(index, 1)
+        }
     }
   }).mount('#app')
