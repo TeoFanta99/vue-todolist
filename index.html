@@ -22,15 +22,18 @@
 
     <div id="app">
 
-        <input type="text" placeholder="Inserisci un'attività da svolgere">
-        <button>AGGIUNGI</button>
+        <input type="text" placeholder="Inserisci un'attività da svolgere" v-model="message">
+        <button @click="addTask">AGGIUNGI</button>
+        <div class="error" v-if="error">
+            <p>Digita almeno 5 caratteri</p>
+        </div>
 
         <ul>
             <!-- in questi li ci sono il v-for per poterlo moltiplicare e la forma compatta di v-if per aggiungere la classe "barrato" agli elementi  -->
-            <li v-for="(todo, i) in todos" :class="todos[i].done === true ? 'barrato' : '' ">
+            <li v-for="(todo, i) in todos" :class="todos[i].done === true ? 'barrato' : '' " >
                 {{todos[i].text}}
                 <i class="fa-solid fa-x" @click="removeItem(i)"></i>
-                 
+          
             </li>
             
         </ul>
