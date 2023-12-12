@@ -15,16 +15,17 @@ button {
 
 .barrato {
     text-decoration-line: line-through;
+    text-decoration-thickness: 1px;
 }
 
 li {
     width: 50%;
     margin-top: 15px;
     background-color: lightgrey;
+    cursor: pointer;
 }
 
 i {
-    cursor: pointer;
     float: right;
 }
 
