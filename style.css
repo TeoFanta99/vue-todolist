@@ -8,3 +8,7 @@ button {
     padding: 10px;
     margin-left: 10px;
 }
+
+.barrato {
+    text-decoration-line: line-through;
+}
