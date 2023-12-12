@@ -22,7 +22,7 @@
 
     <div id="app">
 
-        <input type="text" placeholder="Inserisci un'attività da svolgere" v-model="message">
+        <input type="text" placeholder="Inserisci un'attività da svolgere" v-model="message" @keyup.enter="addTask">
         <button @click="addTask">AGGIUNGI</button>
         <div class="error" v-if="error">
             <p>Digita almeno 5 caratteri</p>
