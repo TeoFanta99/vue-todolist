@@ -24,12 +24,14 @@
 
         <input type="text">
         <button>AGGIUNGI</button>
+
         <ul>
-            <li v-for="(todo, i) in todos">
-                {{todos[i].text}}
+            <!-- in questi li ci sono il v-for per poterlo moltiplicare e la forma compatta di v-if per aggiungere la classe "barrato" agli elementi  -->
+            <li v-for="(todo, i) in todos" :class="todos[i].done === true ? 'barrato' : '' ">
+                 {{todos[i].text}}
             </li>
         </ul>
-
+        
     </div>
 
     <script src="script.js"></script>
