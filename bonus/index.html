@@ -28,15 +28,15 @@
             <p>Digita almeno 5 caratteri</p>
         </div>
 
-        <ul>
+        <ul v-if="todos.length> 0">
             <!-- in questi li ci sono il v-for per poterlo moltiplicare e la forma compatta di v-if per aggiungere la classe "barrato" agli elementi  -->
             <li v-for="(todo, i) in todos" :class="todos[i].done === true ? 'barrato' : '' " @click="inverti(i)" >
                 {{todos[i].text}}
                 <i class="fa-solid fa-x" @click="removeItem(i)"></i>
           
             </li>
-            
         </ul>
+        <h2 v-else>Non hai attività da svolgere</h2>
         
     </div>
 
