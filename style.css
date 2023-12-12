@@ -12,3 +12,14 @@ button {
 .barrato {
     text-decoration-line: line-through;
 }
+
+li {
+    width: 50%;
+    margin-top: 15px;
+    background-color: lightgrey;
+}
+
+i {
+    cursor: pointer;
+    float: right;
+}
