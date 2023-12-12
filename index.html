@@ -20,7 +20,15 @@
 </head>
 <body>
 
-    <div id="app">{{ message }}</div>
+    <div id="app">
+
+        <ul>
+            <li v-for="(todo, i) in todos">
+                {{todos[i].text}}
+            </li>
+        </ul>
+
+    </div>
 
     <script src="script.js"></script>
     
