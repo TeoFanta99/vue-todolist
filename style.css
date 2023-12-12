@@ -27,3 +27,7 @@ i {
     cursor: pointer;
     float: right;
 }
+
+.error {
+    color: red;
+}
